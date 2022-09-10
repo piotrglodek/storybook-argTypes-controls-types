@@ -1,6 +1,6 @@
 # storybook-argTypes-controls-types
 
-Manual storybook argTypes `control` types, because [Storybook](https://storybook.js.org/) are not typed. 
+Manual storybook argTypes `control` types, because [Storybook](https://storybook.js.org/) did not provide typing. 
 
 Basic `control` types for better stories development based on [Storybook controls table](https://storybook.js.org/docs/react/essentials/controls)
 
