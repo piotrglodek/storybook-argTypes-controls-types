@@ -1,33 +1,30 @@
 import { InputType } from "@storybook/csf/dist/story";
 
-export {};
-
-type StorybookRange = {
-  min: number;
-  max: number;
-  step: number;
-};
+export { };
 
 type StorybookControlBoolType = {
   control:
-    | "boolean"
-    | {
-        type: "boolean";
-      };
+  | "boolean"
+  | {
+    type: "boolean";
+  };
 };
 
 type StorybookControlObjectType = {
   control:
-    | "object"
-    | {
-        type: "object";
-      };
+  | "object"
+  | {
+    type: "object";
+  };
 };
 
 type StorybookControlNumberRangeType = {
   control: {
     type: "number" | "range";
-  } & StorybookRange;
+    min: number;
+    max: number;
+    step: number;
+  };
 };
 
 type StorybookControlFileType = {
@@ -41,12 +38,12 @@ type StorybookControlFileType = {
 type StorybookControlEnumsType = {
   control: {
     type:
-      | "radio"
-      | "inline-radio"
-      | "check"
-      | "inline-check"
-      | "select"
-      | "multi-select";
+    | "radio"
+    | "inline-radio"
+    | "check"
+    | "inline-check"
+    | "select"
+    | "multi-select";
     options?: string[];
   };
 };
@@ -54,6 +51,7 @@ type StorybookControlEnumsType = {
 type StorybookControlTextType = {
   control: "text";
 };
+
 type StorybookControlDateType = {
   control: "date";
 };
@@ -72,6 +70,7 @@ type StorybookControlTypes =
   | StorybookControlNumberRangeType
   | StorybookControlFileType
   | StorybookControlEnumsType
+  | StorybookControlTextType
   | StorybookControlColorType
   | StorybookControlDateType;
 
